@@ -13,6 +13,8 @@ Reload agent
 gpg-connect-agent reloadagent /bye
 ```
 
+---
+
 To add my keys run
 
 ```bash
@@ -25,4 +27,4 @@ gpg --edit-key YOUR_KEY_ID
 gpg --list-secret-keys --keyid-format=long
 ```
 
-If for some reason you want to use default pinentry-curses, to make it work under tmux add `export GPG_TTY=$(tty)` to ~/.bashrc
+If for some reason you want to use default pinentry-curses, to make it work under tmux add `export GPG_TTY=$(tty)` to `~/.bashrc`
