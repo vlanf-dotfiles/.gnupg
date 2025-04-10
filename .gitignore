@@ -1,0 +1,5 @@
+*
+!.gitignore
+!README.md
+!gpg-agent.conf
+!gpg.conf
