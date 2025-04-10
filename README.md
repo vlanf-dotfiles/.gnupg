@@ -20,11 +20,24 @@ To add my keys run
 ```bash
 gpg --import private.key
 gpg --import public.key
-gpg --edit-key YOUR_KEY_ID
+gpg --edit-key F3F6E72B21D354FC
 > trust
 > 5
 > save
 gpg --list-secret-keys --keyid-format=long
 ```
 
+To make git auto-sign commits
+
+```bash
+git config --global user.signingkey F3F6E72B21D354FC
+git config --global commit.gpgsign true
+git config --global tag.gpgSign true
+```
+Source: https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
+
 If for some reason you want to use default pinentry-curses, to make it work under tmux add `export GPG_TTY=$(tty)` to `~/.bashrc`
+
+```bash
+[ -f ~/.bashrc ] && echo -e '\nexport GPG_TTY=$(tty)' >> ~/.bashrc
+```
